@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -27,6 +29,10 @@ public class Program2 {
 		id = sc.nextInt();
 		insertDepartment = department.findById(id);
 		System.out.println(insertDepartment);
+		System.out.println("---TEST 5 : Department findAll---");
+		List<Department> list = new ArrayList<>();
+		list = department.findAll();
+		list.forEach(System.out::println);
 		sc.close();
 	}
 
